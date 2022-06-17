@@ -4,12 +4,12 @@ import Frame from "../components/Frame";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 
-function Home() {
+function Welcome() {
   return (
     <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
-      <Frame h1="Student & Faculty COVID-Vaccination Record" h2="Polytechnic University of the Philippines Taguig" />
-      <Button path="/Welcome" label="Answer Form"/>
-      <Button path="/Login" label="Login as Admin"/>
+      <Frame h1="Welcome" h2="Are you a new or old respondent?" />
+      <Button path="/New" label="Submit new record"/>
+      <Button path="/Update" label="Update old record"/>
       <footer className={[styles.tos, styles.center].join(' ')}>
         <p>By using this service, you understand and agree to the PUP Online Services <a href="https://www.pup.edu.ph/terms/">Terms of Use</a> and <a href="https://www.pup.edu.ph/privacy/">Privacy Statement.</a></p>
       </footer>
@@ -17,5 +17,4 @@ function Home() {
   );
 }
 
-export default Home;
-
+export default Welcome;

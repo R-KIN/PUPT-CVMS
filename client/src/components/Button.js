@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "../css/Button.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Button = (props) => {
-
-  const test = () => {
-    console.log("button working...");
-  }
-
+  let navigate = useNavigate();
   return (
-    <button className={[styles.button, styles.center].join(' ')} onClick={test} type="button">{props.label}</button>
+    <button className={[styles.button, styles.center].join(' ')} onClick={() => { navigate(`${props.path}`); }} type="button">{props.label}</button>
   );
 }
 

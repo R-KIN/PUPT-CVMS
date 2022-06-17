@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+
+## [0.0.4] - 2022-06-17
+### Added
+- New record page.
+- PersonalForm, StudentForm, and FacultyForm components.
+- Front end routes for Home and Form pages.
+- Animated transitions between pages.
+- Framepath for non-index pages.
+
+### Modified
+- BasicForm changed => FormInput
+- Minor cleanup on Update, Error, and Login pages.
+- transition/animation dependency changed ffrom "react-transition-group" to "framer-motion"
+
 ## [0.0.3] - 2022-06-15
 ### Added
 - Update, Error, and Login pages.
@@ -34,4 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - setup readme, license, and changelog files
 - base server.js file
 
-[0.0.1]: https://github.com/
+
+[0.0.4]: https://github.com/
+[0.0.3]: https://github.com/R-KIN/PUPT-CVMS/commit/7831b0fbb5e178cefff71549e1a2815be0e50b0e
+[0.0.1]: https://github.com/R-KIN/PUPT-CVMS/commit/a4fcea155110b084fd851454690415e7688ebc23

@@ -1,18 +1,14 @@
 import React from "react";
-import styles from "../css/Home.module.css";
-
+import Frame from "../components/Frame";
+import Button from "../components/Button";
+import { motion } from "framer-motion";
 
 function Error() {
   return (
-    <div>
-      <div className={styles.bar}></div>
-      <img className={[styles.logo, styles.center].join(' ')} src="/logo.png" alt="pup taguig logo" />
-      <h1 className={styles.center}>Student & Faculty COVID-Vaccination Record</h1>
-      <h2 className={styles.center}>Hey!!!</h2>
-      <footer className={[styles.tos, styles.center].join(' ')}>
-        <p>By using this service, you understand and agree to the PUP Online Services <a href="https://www.pup.edu.ph/terms/">Terms of Use</a> and <a href="https://www.pup.edu.ph/privacy/">Privacy Statement.</a></p>
-      </footer>
-    </div>
+    <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
+      <Frame h1="ERROR" h2="404: URL NOT FOUND" />
+      <Button path="/" label="Back"/>
+    </motion.div>
   );
 }
 

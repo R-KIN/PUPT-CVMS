@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans:wght@300&family=Poppins:wght@300;500;700&display=swap');
+
+.form{
+  display: flex;
+  width: 80%;
+  height: 100%;
+  margin-left: 100px;
+  margin-top: 30px;
+  flex-flow: row wrap;
+}
+
+.formDiv,.formDivRadio,.formDivConfirm{
+  display: flex;
+  width: 250px;
+  height: 100%;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formDivRadio,.formDivConfirm{
+  width: 100%;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.formDivRadio{
+  flex-direction: row;
+  gap: 15px;
+}
+
+.formLabel{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.formLabelRadio{
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.formField,.formAddress{
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 80%;
+  padding: 0.4rem;
+}
+
+.formRadio{
+  margin-left: 5px;
+}
+
+.formAddress{
+  width: 100%;
+}
+
+.button{
+  width: 200px;
+  padding: 10px;
+  background-color: #800000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  border-color: #800000;
+}
+
+.button:hover{
+  cursor:pointer;
+}
