@@ -4,12 +4,12 @@
   display: flex;
   width: 80%;
   height: 100%;
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: 30px;
   flex-flow: row wrap;
 }
 
-.formDiv,.formDivRadio,.formDivConfirm{
+.formDiv,.formDivRadio{
   display: flex;
   width: 250px;
   height: 100%;
@@ -17,7 +17,7 @@
   margin-bottom: 10px;
 }
 
-.formDivRadio,.formDivConfirm{
+.formDivRadio{
   width: 100%;
   flex-direction: row;
   gap: 15px;
@@ -55,8 +55,13 @@
   width: 100%;
 }
 
+.buttonDiv{
+  width: 100%;
+  margin-top: 10px;
+}
+
 .button{
-  width: 200px;
+  width: 150px;
   padding: 10px;
   background-color: #800000;
   font-family: 'Poppins', sans-serif;
@@ -69,3 +74,4 @@
 .button:hover{
   cursor:pointer;
 }
+

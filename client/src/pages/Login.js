@@ -44,7 +44,7 @@ function Login() {
   console.log(values);
 
   return (
-    <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
+    <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
       <Frame h1="Login" h2="Sign in to continue" />
       <form className={styles.formDiv} action="#" method="post" onSubmit={handleSubmit}>
         {inputs.map(input=> (

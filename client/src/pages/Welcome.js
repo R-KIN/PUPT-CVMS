@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Welcome() {
   return (
-    <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
+    <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
       <Frame h1="Welcome" h2="Are you a new or old respondent?" />
       <Button path="/New" label="Submit new record"/>
       <Button path="/Update" label="Update old record"/>

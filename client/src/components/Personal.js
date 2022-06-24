@@ -1,12 +1,18 @@
 import React from "react";
-import styles from "../css/New.module.css";
+import styles from "../css/Personal.module.css";
 import FramePath from "../components/FramePath";
 import { motion } from "framer-motion";
 
-const Personal = ({ nextStep, onChange, values}) => {
+const Personal = ({ studentStep, facultyStep, onChange, values}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    nextStep();
+    if(values.status === "Faculty") {
+      facultyStep();
+    }
+
+    if(values.status === "Student")  {
+      studentStep();
+    }
     /* const data = new FormData(e.target)
     console.log(Object.fromEntries(data.entries())); */
   };
@@ -14,7 +20,7 @@ const Personal = ({ nextStep, onChange, values}) => {
   // console.log(values);
 
   return (
-    <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
+    <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
       <FramePath h1="New Form | Personal Profile" h2="Please enter the following information" />
       <form className={styles.form} action="#" method="post" onSubmit={handleSubmit}>
         <div className={styles.formDiv}>
@@ -152,22 +158,9 @@ const Personal = ({ nextStep, onChange, values}) => {
           required={true}
           />
         </div>
-        <div className={styles.formDivConfirm}>
-          <input
-          className={styles.formRadio}
-          type="radio"
-          name="confirm"
-          value="OK"
-          checked={values.confirm === "OK"}
-          onChange={onChange}
-          required={true}
-          />
-          <label className={styles.formLabel}>I hereby attest that the information I will provide
-          in this document are true and correct to the best of my knowledge and understand that any dishonest
-          answer may have serious legal and public health implications under RA 11332.
-          </label>
+        <div className={styles.buttonDiv}>
+          <button className={styles.button} type="submit">Continue</button>        
         </div>
-        <button className={styles.button} type="submit">Continue</button>
       </form>
   </motion.div>
   );

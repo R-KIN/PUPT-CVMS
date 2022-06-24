@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.0.5] - 2022-06-24
+### Added
+- Basic functionality to Personal, Student, and Faculty components.
+
+### Modified
+- Logo now always reroutes to index in non-admin session.
+- Slight change in animation axis.
+- PersonalForm => Personal, StudentForm => Student, FacultyForm => Faculty components.
 
 ## [0.0.4] - 2022-06-17
 ### Added
@@ -49,6 +57,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - base server.js file
 
 
-[0.0.4]: https://github.com/
+[0.0.4]: https://github.com/R-KIN/PUPT-CVMS/commit/dbcaa82d6bae915262de8a16cb171a916b4164d0
 [0.0.3]: https://github.com/R-KIN/PUPT-CVMS/commit/7831b0fbb5e178cefff71549e1a2815be0e50b0e
 [0.0.1]: https://github.com/R-KIN/PUPT-CVMS/commit/a4fcea155110b084fd851454690415e7688ebc23

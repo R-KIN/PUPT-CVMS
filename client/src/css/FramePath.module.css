@@ -19,6 +19,14 @@
   margin: 22px 0 22px 22px;
   width: 112px;
   height: 112px;
+  background: #fff url("../../public/logo.png") no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+}
+
+.logo:hover{
+  cursor: pointer;
 }
 
 .path,.subpath{

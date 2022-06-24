@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
+    <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
       <Frame h1="Student & Faculty COVID-Vaccination Record" h2="Polytechnic University of the Philippines Taguig" />
       <Button path="/Welcome" label="Answer Form"/>
       <Button path="/Login" label="Login as Admin"/>

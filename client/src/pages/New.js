@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Personal from "../components/Personal";
 import Student from "../components/Student";
-import { motion } from "framer-motion";
+import Faculty from "../components/Faculty";
 
 function New() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState("personal");
 
   const [values, setValues] = useState({
     firstname:"",
@@ -20,21 +20,31 @@ function New() {
     confirm:"",
     course:"",
     yearsection:"",
-    vaccinated:"",
+    tempstatus:"",
+    stayduration:"",
+    vaccinestatus:"",
     vaccinename:"",
     firstdose:"",
     seconddose:"",
-    boostered:"",
+    boosterstatus:"",
     boostername:"",
     boosterdate:"",
   });
 
-  const nextStep = () => {
-    setStep(step + 1);
+  const confirmStep = () => {
+    setStep("confirmation");
+  }
+
+  const facultyStep = () => {
+    setStep("faculty");
+  }
+
+  const studentStep = () => {
+    setStep("student");
   };
 
   const prevStep = () => {
-    setStep(step - 1);
+    setStep("personal");
   }; 
 
   /* const handleSubmit = (e) => {
@@ -50,28 +60,24 @@ function New() {
   console.log(values);
 
   switch(step) {
-    case 1:
+    case "personal":
       return (
-        <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
-          <Personal nextStep={nextStep} onChange={onChange} values={values} />
-        </motion.div>
+          <Personal facultyStep={facultyStep} studentStep={studentStep} onChange={onChange} values={values} />
       );
-    case 2:
+    case "student":
       return (
-        <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
-          <Student nextStep={nextStep} prevStep={prevStep} onChange={onChange} values={values} />
-        </motion.div>
+          <Student confirmStep={confirmStep} prevStep={prevStep} onChange={onChange} values={values} />
       );
-    case 3:
+    case "faculty":
       return (
-        <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
-        </motion.div>
+          <Faculty confirmStep={confirmStep} prevStep={prevStep} onChange={onChange} values={values} />
       );
+    case "confirmation":
+      console.log("done!");
+      console.log(values);
+      break;
     default:
-      return (
-        <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}}>
-        </motion.div>
-      );
+      // bruh
   }
 }
 
